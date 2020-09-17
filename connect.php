@@ -10,12 +10,10 @@
         die("Connection failed: ".$conn->connect_error);
     }
     // sql to create table
-    $sql = "CREATE TABLE user(
+    $sql = "CREATE TABLE profileimg(
         id int(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-        firstname varchar(50) NOT NULL,
-        lastname varchar(50) NOT NULL,
-        username varchar(256) NOT NULL,
-        password varchar(256) NOT NULL,
+        userid int(11) NOT NULL,
+        status int (11) NOT NULL,
         reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
     )";
     if($conn->query($sql) === TRUE){
